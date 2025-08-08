@@ -1,18 +1,11 @@
-{% extends "layouts/main.html" %}
- 
-{% block beforeContent %}
+{% extends "govuk-prototype-kit/layouts/unbranded.html" %}
 
-
- {{ govukPhaseBanner({ 
-    tag: { 
-        text: "Alpha" }, 
-        html: 'This is a new service. Help us improve it and <a class="govuk-link" href="#">give your feedback by email</a>.'
-     }) }} 
-   
-
+{% block pageTitle %}
+  Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block content %}
+
 
 
 
@@ -194,5 +187,6 @@
     
   </div> 
 </div> 
+
 
 {% endblock %}
