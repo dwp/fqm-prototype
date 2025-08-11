@@ -1,24 +1,5 @@
 {% extends "layouts/main.html" %}
-
-{% block pageTitle %}
-  Start page template – {{ serviceName }} – GOV.UK Prototype Kit
-{% endblock %}
-
-{% block header %}
-  <!-- Blank header with no service name for the start page -->
-  {{ govukHeader() }}
-{% endblock %}
-
-{% block beforeContent %}
- {{ govukPhaseBanner({ 
-    tag: { 
-        text: "Alpha" }, 
-        html: 'This is a new service. Help us improve it and <a class="govuk-link" href="#">give your feedback by email</a>.'
-     }) }} 
-   
-
-{% endblock %}
-
+ 
 {% block content %}
 
   <div class="govuk-grid-row">
@@ -31,19 +12,19 @@
       <p>Use this service to:</p>
 
       <ul class="govuk-list govuk-list--bullet">
-        <li>Select a case</li>
-        <li>View case overview</li>
+        <li>Select an assurance</li>
+        <li>Assurance overview</li>
         <li>Check details</li>
         <li>Check questions and record errors</li>
         <li>Make final checks</li>
-        <li>Complete a case</li>
+        <li>Complete assurance</li>
       </ul>
 
       
 
       {{ govukButton({
         text: "Start now",
-        href: "select-case",
+        href: "select-assurance",
         isStartButton: true
       }) }}
 
