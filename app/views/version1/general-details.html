@@ -1,6 +1,16 @@
 
 {% extends "layouts/main.html" %}
  
+{% block header %}
+{{
+    dwpHeader({
+        serviceName: serviceName,
+        serviceHref: "/",
+        container: true
+    })
+}}
+
+{% endblock %}
 {% block beforeContent %}
 
 
@@ -17,10 +27,55 @@
 
 
 <div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third"> 
+
+  <button class="dwp-side-navigation__button" data-module="dwp-side-navigation"
+  data-target="dwp-side-navigation-panel"
+  data-label-hide="Hide navigation"
+  data-label-show="Show navigation"
+  aria-expanded="false">
+  <span class="dwp-side-navigation__section-toggle-focus">
+    <span class="dwp-side-navigation__chevron dwp-side-navigation__chevron--down"></span>
+    <span class="dwp-side-navigation__section-toggle-text">Show navigation</span>
+  </span>
+</button>
+<nav data-module="dwp-side-navigation-panel" class="dwp-side-navigation dwp-side-navigation--mobile" aria-label="Side" role="navigation">
+  <ul class="dwp-side-navigation__list">
+    <li class="dwp-side-navigation__item  dwp-side-navigation__item--selected">
+      <a id="s-item-1" href="general-details" class="dwp-side-navigation__link--selected" aria-current="true">
+       General details
+      </a>
+    </li>
+    <li class="dwp-side-navigation__item">
+      <a id="s-item-2" href="customer-details" class="dwp-side-navigation__link dwp-side-navigation__link">
+       Customer details
+      </a>
+    </li>
+    <li class="dwp-side-navigation__item">
+      <a id="s-item-3" href="sample-details" class="dwp-side-navigation__link">
+        Sample details
+      </a>
+    </li>
+    <li class="dwp-side-navigation__item">
+      <a id="s-item-4" href="award-sample-week" class="dwp-side-navigation__link">
+        Award and sample week
+      </a>
+    </li>
+    <li class="dwp-side-navigation__item">
+      <a id="s-item-5" href="sections" class="dwp-side-navigation__link">
+        Sections
+      </a>
+    </li>
+  </ul>
+</nav>
+  </div>
   <div class="govuk-grid-column-two-thirds"> 
+
+    
+
      <form class="form" action="assurance-details" method="post">
  <span class="govuk-caption-l">Case 01234567</span>
-<h1 class="govuk-heading-l">Assurance details</h1>
+<h1 class="govuk-heading-l">General details</h1>
 
  <div class="govuk-form-group">
   <label class="govuk-label" for="sort">
@@ -66,10 +121,7 @@
   <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
     <legend class="govuk-fieldset__legend">
       <b>Call / contact date</b>
-    </legend>
-    <div id="passport-issued-hint" class="govuk-hint">
-      For example, 27 3 2007
-    </div>
+    </legend>  
     <div class="govuk-date-input" id="passport-issued">
       <div class="govuk-date-input__item">
         <div class="govuk-form-group">
@@ -119,12 +171,20 @@
   </fieldset>
 </div>
 
-<div class="govuk-button-group">
-  <button type="submit" class="govuk-button" data-module="govuk-button">
-    Check case details
-  </button>
-  <a class="govuk-link" href="#">Deselect case</a>
+<div class="govuk-form-group">
+  <label class="govuk-label" for="width-10">
+   <b>Secondary  verint number</b> 
+  </label>
+  <input class="govuk-input govuk-input--width-10" id="width-10" name="width10" type="text">
 </div>
+
+ 
+<br clear="all">
+
+
+
+  <button type="submit" class="govuk-button" data-module="govuk-button" >Save and continue</button>
+
 
   
     </form>

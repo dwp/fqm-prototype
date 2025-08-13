@@ -1,0 +1,184 @@
+
+{% extends "layouts/main.html" %}
+ 
+{% block header %}
+{{
+    dwpHeader({
+        serviceName: serviceName,
+        serviceHref: "/",
+        container: true
+    })
+}}
+
+{% endblock %}
+{% block beforeContent %}
+
+
+ {{ govukPhaseBanner({ 
+    tag: { 
+        text: "Alpha" }, 
+        html: 'This is a new service. Help us improve it and <a class="govuk-link" href="#">give your feedback by email</a>.'
+     }) }}  
+
+{% endblock %}
+
+{% block content %}
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third"> 
+
+  <button class="dwp-side-navigation__button" data-module="dwp-side-navigation"
+  data-target="dwp-side-navigation-panel"
+  data-label-hide="Hide navigation"
+  data-label-show="Show navigation"
+  aria-expanded="false">
+  <span class="dwp-side-navigation__section-toggle-focus">
+    <span class="dwp-side-navigation__chevron dwp-side-navigation__chevron--down"></span>
+    <span class="dwp-side-navigation__section-toggle-text">Show navigation</span>
+  </span>
+</button>
+<nav data-module="dwp-side-navigation-panel" class="dwp-side-navigation dwp-side-navigation--mobile" aria-label="Side" role="navigation">
+  <ul class="dwp-side-navigation__list">
+    <li class="dwp-side-navigation__item  dwp-side-navigation__item--selected">
+      <a id="s-item-1" href="general-details" class="dwp-side-navigation__link--selected" aria-current="true">
+       General details
+      </a>
+    </li>
+    <li class="dwp-side-navigation__item">
+      <a id="s-item-2" href="customer-details" class="dwp-side-navigation__link dwp-side-navigation__link">
+       Customer details
+      </a>
+    </li>
+    <li class="dwp-side-navigation__item">
+      <a id="s-item-3" href="sample-details" class="dwp-side-navigation__link">
+        Sample details
+      </a>
+    </li>
+    <li class="dwp-side-navigation__item">
+      <a id="s-item-4" href="award-sample-week" class="dwp-side-navigation__link">
+        Award and sample week
+      </a>
+    </li>
+    <li class="dwp-side-navigation__item">
+      <a id="s-item-5" href="sections" class="dwp-side-navigation__link">
+        Sections
+      </a>
+    </li>
+  </ul>
+</nav>
+  </div>
+  <div class="govuk-grid-column-two-thirds"> 
+
+    
+
+     <form class="form" action="assurance-details" method="post">
+ <span class="govuk-caption-l">Case 01234567</span>
+<h1 class="govuk-heading-l">Customer details</h1>
+
+ <div class="govuk-form-group">
+  <label class="govuk-label" for="sort">
+    <b> Assurance special categorisation</b>
+  </label>
+  <select class="govuk-select" id="sort" name="sort">
+    <option value="published">Not applicable</option>
+    <option value="updated" selected>Recently updated</option>
+    <option value="views">Most views</option>
+    <option value="comments">Most comments</option>
+  </select>
+</div>
+   
+  
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+      <h2 class="govuk-fieldset__heading">
+        Select identifier
+      </h2>
+    </legend>
+ 
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
+        <label class="govuk-label govuk-radios__label" for="contact">
+          Nino
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
+        <label class="govuk-label govuk-radios__label" for="contact-2">
+         CRN
+        </label>
+      </div>
+  </fieldset>
+</div>
+
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s"> Is there a partner?</legend>
+
+    </div>
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
+        <label class="govuk-label govuk-radios__label" for="contact">
+          Email
+        </label>
+      </div>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="contact-by-email">
+            Email address
+          </label>
+          <input class="govuk-input govuk-!-width-one-third" id="contact-by-email" name="contactByEmail" type="email" spellcheck="false" autocomplete="email">
+        </div>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
+        <label class="govuk-label govuk-radios__label" for="contact-2">
+          Phone
+        </label>
+      </div>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-2">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="contact-by-phone">
+            Phone number
+          </label>
+          <input class="govuk-input govuk-!-width-one-third" id="contact-by-phone" name="contactByPhone" type="tel" autocomplete="tel">
+        </div>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="contact-3" name="contact" type="radio" value="text" data-aria-controls="conditional-contact-3">
+        <label class="govuk-label govuk-radios__label" for="contact-3">
+          Text message
+        </label>
+      </div>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-3">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="contact-by-text">
+            Mobile phone number
+          </label>
+          <input class="govuk-input govuk-!-width-one-third" id="contact-by-text" name="contactByText" type="tel" autocomplete="tel">
+        </div>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+ 
+ 
+<br clear="all">
+
+
+
+  <button type="submit" class="govuk-button" data-module="govuk-button" >Save and continue</button>
+
+
+  
+    </form>
+  </div> 
+</div> 
+
+{% endblock %}

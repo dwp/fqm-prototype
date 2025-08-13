@@ -1,6 +1,7 @@
 
 {% extends "layouts/main.html" %}
 
+ 
 {% block beforeContent %}
 
 
@@ -38,6 +39,11 @@
         Outstanding assurances
       </a>
     </li>
+     <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab" href="#rework">
+       Rework
+      </a>
+    </li>
     <li class="govuk-tabs__list-item">
       <a class="govuk-tabs__tab" href="#peer-to-peer">
         Peer to peer
@@ -49,15 +55,11 @@
       </a>
     </li>
     <li class="govuk-tabs__list-item">
-      <a class="govuk-tabs__tab" href="#rework">
-        Rework
-      </a>
-    </li>
-     <li class="govuk-tabs__list-item">
-      <a class="govuk-tabs__tab" href="#rework">
+      <a class="govuk-tabs__tab" href="#completed">
         Completed
       </a>
     </li>
+    
   </ul>
   <div class="govuk-tabs__panel" id="main-check">
      
@@ -81,19 +83,85 @@
           <td class="govuk-table__cell"><a href="#">01234568</a></td>
           <td class="govuk-table__cell">Claims maintenance</td>
           <td class="govuk-table__cell">5 December 2024</td>
-          <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--yellow">Brought forward</strong></td>
+          <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--yellow">In progress</strong></td>
         </tr>
        <tr class="govuk-table__row">
           <td class="govuk-table__cell"><a href="#">01234569</a></td>
           <td class="govuk-table__cell">New claim</td>
           <td class="govuk-table__cell">7 December 2024</td>
-          <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">Potential errors</strong></td>
+          <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">Disputes</strong></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="#">01234570</a></td>
+          <td class="govuk-table__cell">New claim</td>
+          <td class="govuk-table__cell">13 December 2024</td>
+          <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--yellow">Potential errors</strong></td>
         </tr>
       </tbody>
     </table>
 
      <button type="submit" class="govuk-button" data-module="govuk-button">New outstanding assurance</button> 
   </div>
+  
+  <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="rework">
+   
+   <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Case ID</th>
+          <th scope="col" class="govuk-table__header">Check type</th>
+          <th scope="col" class="govuk-table__header">Due date</th>
+          <th scope="col" class="govuk-table__header">Status</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="#">01234591</a></td>
+          <td class="govuk-table__cell">Claims maintenance</td>
+          <td class="govuk-table__cell">26 November 2024</td>
+          <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--yellow">Feedback sent</strong></td>
+        </tr>
+       <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="#">01234592</a></td>
+          <td class="govuk-table__cell">New claim</td>
+          <td class="govuk-table__cell">27 November 2024</td>
+          <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">Overdue</strong></td>
+        </tr>
+         <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="#">01234593</a></td>
+          <td class="govuk-table__cell">New claim</td>
+          <td class="govuk-table__cell">28 November 2024</td>
+          <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--yellow">Reminder sent</strong></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="#">01234594</a></td>
+          <td class="govuk-table__cell">Claims maintenance</td>
+          <td class="govuk-table__cell">29 November 2024</td>
+          <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--yellow">Escalated</strong></td>
+        </tr>
+       <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="#">01234598</a></td>
+          <td class="govuk-table__cell">New claim</td>
+          <td class="govuk-table__cell">29 November 2024</td>
+          <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--yellow">Escalated x2</strong></td>
+        </tr>
+         <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="#">01234599</a></td>
+          <td class="govuk-table__cell">New claim</td>
+          <td class="govuk-table__cell">30 November 2024</td>
+          <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--yellow">Escalated to QGB</strong></td>
+        </tr>
+         <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="#">01234590</a></td>
+          <td class="govuk-table__cell">New claim</td>
+          <td class="govuk-table__cell">5 December 2024</td>
+          <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--blue">Rework complete</strong></td>
+        </tr>
+      </tbody>
+    </table>
+    <button type="submit" class="govuk-button" data-module="govuk-button">New rework</button> 
+  </div>
+
   <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="peer-to-peer">
    
     <table class="govuk-table">
@@ -107,22 +175,10 @@
       </thead>
       <tbody class="govuk-table__body">
         <tr class="govuk-table__row">
-          <td class="govuk-table__cell"><a href="#">01234570</a></td>
+          <td class="govuk-table__cell"><a href="#">01234520</a></td>
           <td class="govuk-table__cell">New claim</td>
           <td class="govuk-table__cell">22 November 2024</td>
           <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">New</strong></td>
-        </tr>
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell"><a href="#">01234571</a></td>
-          <td class="govuk-table__cell">Claims maintenance</td>
-          <td class="govuk-table__cell">15 December 2024</td>
-          <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">New</strong></td>
-        </tr>
-       <tr class="govuk-table__row">
-          <td class="govuk-table__cell"><a href="#">01234571</a></td>
-          <td class="govuk-table__cell">New claim</td>
-          <td class="govuk-table__cell">17 December 2024</td>
-          <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--yellow">Brought forward</strong></td>
         </tr>
       </tbody>
     </table>
@@ -141,28 +197,17 @@
       </thead>
       <tbody class="govuk-table__body">
         <tr class="govuk-table__row">
-          <td class="govuk-table__cell"><a href="#">01234581</a></td>
-          <td class="govuk-table__cell">New claim</td>
-          <td class="govuk-table__cell">20 November 2024</td>
-          <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--yellow">Brought forward</strong></td>
-        </tr>
-        <tr class="govuk-table__row">
           <td class="govuk-table__cell"><a href="#">01234582</a></td>
           <td class="govuk-table__cell">Claims maintenance</td>
           <td class="govuk-table__cell">11 December 2024</td>
-          <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--blue">In progress</strong></td>
-        </tr>
-       <tr class="govuk-table__row">
-          <td class="govuk-table__cell"><a href="#">01234583</a></td>
-          <td class="govuk-table__cell">New claim</td>
-          <td class="govuk-table__cell">12 December 2024</td>
-          <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">Potential errors</strong></td>
+          <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--yellow">In progress</strong></td>
         </tr>
       </tbody>
     </table>
      <button type="submit" class="govuk-button" data-module="govuk-button">New callibration assurance</button> 
   </div>
-  <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="rework">
+  
+  <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="completed">
    
    <table class="govuk-table">
       <thead class="govuk-table__head">
@@ -178,52 +223,7 @@
           <td class="govuk-table__cell"><a href="#">01234590</a></td>
           <td class="govuk-table__cell">New claim</td>
           <td class="govuk-table__cell">25 November 2024</td>
-          <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--blue">In progress</strong></td>
-        </tr>
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell"><a href="#">01234591</a></td>
-          <td class="govuk-table__cell">Claims maintenance</td>
-          <td class="govuk-table__cell">26 November 2024</td>
-          <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--blue">In progress</strong></td>
-        </tr>
-       <tr class="govuk-table__row">
-          <td class="govuk-table__cell"><a href="#">01234592</a></td>
-          <td class="govuk-table__cell">New claim</td>
-          <td class="govuk-table__cell">27 November 2024</td>
-          <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">Potential errors</strong></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="rework">
-   
-   <table class="govuk-table">
-      <thead class="govuk-table__head">
-        <tr class="govuk-table__row">
-          <th scope="col" class="govuk-table__header">Case ID</th>
-          <th scope="col" class="govuk-table__header">Check type</th>
-          <th scope="col" class="govuk-table__header">Due date</th>
-          <th scope="col" class="govuk-table__header">Status</th>
-        </tr>
-      </thead>
-      <tbody class="govuk-table__body">
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell"><a href="#">01234590</a></td>
-          <td class="govuk-table__cell">New claim</td>
-          <td class="govuk-table__cell">25 November 2024</td>
-          <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--blue">In progress</strong></td>
-        </tr>
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell"><a href="#">01234591</a></td>
-          <td class="govuk-table__cell">Claims maintenance</td>
-          <td class="govuk-table__cell">26 November 2024</td>
-          <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--blue">In progress</strong></td>
-        </tr>
-       <tr class="govuk-table__row">
-          <td class="govuk-table__cell"><a href="#">01234592</a></td>
-          <td class="govuk-table__cell">New claim</td>
-          <td class="govuk-table__cell">27 November 2024</td>
-          <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">Potential errors</strong></td>
+          <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--blue">Complete</strong></td>
         </tr>
       </tbody>
     </table>
