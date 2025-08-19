@@ -1,0 +1,84 @@
+
+{% extends "layouts/main.html" %}
+ 
+{% block beforeContent %}
+
+
+ {{ govukPhaseBanner({ 
+    tag: { 
+        text: "Alpha" }, 
+        html: 'This is a new service. Help us improve it and <a class="govuk-link" href="#">give your feedback by email</a>.'
+     }) }}  
+
+<nav class="govuk-breadcrumbs" aria-label="Breadcrumb">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="select-assurance">My assurances</a>
+    </li>
+   
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="assurance-overview">Overview</a>
+    </li>
+     <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="assurance-details-complete">Assurance details</a>
+    </li>
+      <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="assurance-questions">Assurance questions</a>
+    </li>
+  </ol>
+</nav>
+
+{% endblock %}
+
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds"> 
+     <form class="form" action="check-summary" method="post">
+ <span class="govuk-caption-l">ID 1234567</span>
+<h1 class="govuk-heading-l">Assurance details</h1>
+
+ <table class="govuk-table">
+  <caption class="govuk-table__caption govuk-table__caption--m">Month you apply</caption>
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header govuk-!-width-one-half">Date</th>
+      <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Rate for vehicles</th>
+      <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Rate for bicycles</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">First 6 weeks</th>
+      <td class="govuk-table__cell">£109.80 per week</td>
+      <td class="govuk-table__cell">£59.10 per week</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Next 33 weeks</th>
+      <td class="govuk-table__cell">£159.80 per week</td>
+      <td class="govuk-table__cell">£89.10 per week</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Total estimated pay</th>
+      <td class="govuk-table__cell">£4,282.20</td>
+      <td class="govuk-table__cell">£2,182.20</td>
+    </tr>
+  </tbody>
+</table> 
+
+<p class="govuk-body"> </p>
+<div class="govuk-button-group">
+<button type="submit"  class="govuk-button" data-module="govuk-button">
+ Save and continue
+</button>
+ 
+</div>
+
+ 
+    </form>
+  </div> 
+</div> 
+
+{% endblock %}

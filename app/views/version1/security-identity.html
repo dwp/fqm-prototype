@@ -1,0 +1,198 @@
+
+{% extends "layouts/main.html" %}
+ 
+{% block header %}
+{{
+    dwpHeader({
+        serviceName: serviceName,
+        serviceHref: "/",
+        container: true
+    })
+}}
+
+{% endblock %}
+{% block beforeContent %}
+
+
+ {{ govukPhaseBanner({ 
+    tag: { 
+        text: "Alpha" }, 
+        html: 'This is a new service. Help us improve it and <a class="govuk-link" href="#">give your feedback by email</a>.'
+     }) }}  
+
+<nav class="govuk-breadcrumbs" aria-label="Breadcrumb">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="select-assurance">My assurances</a>
+    </li>
+   
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="assurance-overview">Overview</a>
+    </li>
+     <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="assurance-details">Details</a>
+    </li>
+     <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="assurance-details">Assurance questions</a>
+    </li>
+    
+  </ol>
+</nav>
+
+
+{% endblock %}
+
+{% block content %}
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third"> 
+
+  <button class="dwp-side-navigation__button" data-module="dwp-side-navigation"
+  data-target="dwp-side-navigation-panel"
+  data-label-hide="Hide navigation"
+  data-label-show="Show navigation"
+  aria-expanded="false">
+  <span class="dwp-side-navigation__section-toggle-focus">
+    <span class="dwp-side-navigation__chevron dwp-side-navigation__chevron--down"></span>
+    <span class="dwp-side-navigation__section-toggle-text">Show navigation</span>
+  </span>
+</button>
+<nav data-module="dwp-side-navigation-panel" class="dwp-side-navigation dwp-side-navigation--mobile" aria-label="Side" role="navigation">
+  <ul class="dwp-side-navigation__list">
+    
+    
+    <li class="dwp-side-navigation__item  dwp-side-navigation__item--selected">
+      <a id="s-item-1" href="security-identity" class="dwp-side-navigation__link" aria-current="true">
+      Security and Identity Verification for DWP 
+      </a>
+    </li>
+    <li class="dwp-side-navigation__item">
+      <a id="s-item-2" href="#" class="dwp-side-navigation__link">
+      Personal details
+      </a>
+    </li>
+    <li class="dwp-side-navigation__item">
+      <a id="s-item-3" href="#" class="dwp-side-navigation__link">
+       Claim date and Eligibility
+      </a>
+    </li>
+    <li class="dwp-side-navigation__item">
+      <a id="s-item-4" href="#" class="dwp-side-navigation__link">
+        Contributions Conditions and Tax
+      </a>
+    </li>
+    <li class="dwp-side-navigation__item">
+      <a id="s-item-5" href="sections" class="dwp-side-navigation__link">
+       Medical details
+      </a>
+    </li>
+        <li class="dwp-side-navigation__item">
+      <a id="s-item-1" href="security-identity" class="dwp-side-navigation__link" >
+      Special Rules / End of Life
+      </a>
+    </li>
+    <li class="dwp-side-navigation__item">
+      <a id="s-item-2" href="#" class="dwp-side-navigation__link">
+       Linking
+      </a>
+    </li>
+    <li class="dwp-side-navigation__item">
+      <a id="s-item-3" href="#" class="dwp-side-navigation__link">
+        Other benefits
+      </a>
+    </li>
+    <li class="dwp-side-navigation__item">
+      <a id="s-item-4" href="#" class="dwp-side-navigation__link">
+       Premium and extra amounts
+      </a>
+    </li>
+    <li class="dwp-side-navigation__item">
+      <a id="s-item-5" href="sections" class="dwp-side-navigation__link">
+       Employment/self employment and earnings
+      </a>
+    </li>
+     <li class="dwp-side-navigation__item">
+      <a id="s-item-4" href="#" class="dwp-side-navigation__link">
+       Non state pension
+      </a>
+    </li>
+    <li class="dwp-side-navigation__item">
+      <a id="s-item-5" href="sections" class="dwp-side-navigation__link">
+       Housing
+      </a>
+    </li>
+  </ul>
+</nav>
+  </div>
+  <div class="govuk-grid-column-two-thirds"> 
+
+    
+
+     <form class="form" action="customer-details" method="post">
+ <span class="govuk-caption-l">ID 1234567</span>
+<h1 class="govuk-heading-l"> Security and Identity Verification for DWP </h1>
+
+ <div class="govuk-form-group">
+  <label class="govuk-label" for="sort">
+    <b> Answer all questions</b>
+  </label>
+  <select class="govuk-select" id="sort" name="sort">
+    <option value="not applicabl" selected>Not applicable</option>
+    <option value="yes">Yes</option>
+  </select>
+</div>
+    
+   <hr>
+  
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+   <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">Has the customer's identity been correctly established and verified?</legend>
+    <div class="govuk-radios" data-module="govuk-radios">
+      
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input"  name="contact" type="radio" value="phone" >
+        <label class="govuk-label govuk-radios__label" for="contact-2">
+         Not applicable
+        </label>
+      </div>
+       <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
+        <label class="govuk-label govuk-radios__label" for="contact">
+          Yes
+        </label>
+      </div>
+     <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
+        <label class="govuk-label govuk-radios__label" for="contact">
+          No (record error)
+        </label>
+      </div>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
+        <div class="govuk-form-group">        
+             <a href="#">Record the error (opens in a new tab)</a>
+        </div>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+ 
+      
+
+ 
+ 
+<div class="govuk-button-group">
+  <button type="submit" class="govuk-button" data-module="govuk-button" >Save and continue</button>
+<button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+    Save and bring forward
+  </button>
+</div>
+  
+    </form>
+  </div> 
+</div> 
+
+{% endblock %}

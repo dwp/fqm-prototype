@@ -10,6 +10,20 @@
         html: 'This is a new service. Help us improve it and <a class="govuk-link" href="#">give your feedback by email</a>.'
      }) }}  
 
+     <nav class="govuk-breadcrumbs" aria-label="Breadcrumb">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="select-assurance">My assurances</a>
+    </li>
+   
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="assurance-overview">Overview</a>
+    </li>
+     <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="#">Assurance details</a>
+    </li>
+  </ol>
+</nav>
 {% endblock %}
 
 
@@ -17,10 +31,10 @@
 
 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-full-width"> 
-     <form class="form" action="general-details" method="post">
- <span class="govuk-caption-l">Case 01234567</span>
-<h1 class="govuk-heading-l">Assurance overview</h1>
+  <div class="govuk-grid-column-two-thirds"> 
+     <form class="form" action="assurance-questions" method="post">
+ <span class="govuk-caption-l">ID 1234567</span>
+<h1 class="govuk-heading-l">Assurance details</h1>
 
  
   <ul class="govuk-task-list">
