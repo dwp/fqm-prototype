@@ -41,13 +41,13 @@
 </button>
 <nav data-module="dwp-side-navigation-panel" class="dwp-side-navigation dwp-side-navigation--mobile" aria-label="Side" role="navigation">
   <ul class="dwp-side-navigation__list">
-    <li class="dwp-side-navigation__item  dwp-side-navigation__item--selected">
-      <a id="s-item-1" href="general-details" class="dwp-side-navigation__link--selected" aria-current="true">
+    <li class="dwp-side-navigation__item ">
+      <a id="s-item-1" href="general-details" class="dwp-side-navigation__link" >
        General details
       </a>
     </li>
-    <li class="dwp-side-navigation__item">
-      <a id="s-item-2" href="customer-details" class="dwp-side-navigation__link dwp-side-navigation__link">
+    <li class="dwp-side-navigation__item  dwp-side-navigation__item--selected" aria-current="true">
+      <a id="s-item-2" href="customer-details" class="dwp-side-navigation__link">
        Customer details
       </a>
     </li>
@@ -73,7 +73,7 @@
 
     
 
-     <form class="form" action="assurance-details" method="post">
+     <form class="form" action="sample-details" method="post">
  <span class="govuk-caption-l">Case 01234567</span>
 <h1 class="govuk-heading-l">Customer details</h1>
 
@@ -89,48 +89,24 @@
   </select>
 </div>
    
-  
-<div class="govuk-form-group">
-  <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
-    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
-      <h2 class="govuk-fieldset__heading">
-        Select identifier
-      </h2>
-    </legend>
  
-    <div class="govuk-radios" data-module="govuk-radios">
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
-        <label class="govuk-label govuk-radios__label" for="contact">
-          Nino
-        </label>
-      </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
-        <label class="govuk-label govuk-radios__label" for="contact-2">
-         CRN
-        </label>
-      </div>
-  </fieldset>
-</div>
 
 
 <div class="govuk-form-group">
   <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
-    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s"> Is there a partner?</legend>
-
-    </div>
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">Select identifier</legend>
+  
     <div class="govuk-radios" data-module="govuk-radios">
       <div class="govuk-radios__item">
         <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
         <label class="govuk-label govuk-radios__label" for="contact">
-          Email
+          NINO
         </label>
       </div>
       <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
         <div class="govuk-form-group">
           <label class="govuk-label" for="contact-by-email">
-            Email address
+            National Insurance number
           </label>
           <input class="govuk-input govuk-!-width-one-third" id="contact-by-email" name="contactByEmail" type="email" spellcheck="false" autocomplete="email">
         </div>
@@ -138,34 +114,63 @@
       <div class="govuk-radios__item">
         <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
         <label class="govuk-label govuk-radios__label" for="contact-2">
-          Phone
+          CRF
         </label>
       </div>
       <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-2">
         <div class="govuk-form-group">
           <label class="govuk-label" for="contact-by-phone">
-            Phone number
+           Customer reference number
           </label>
           <input class="govuk-input govuk-!-width-one-third" id="contact-by-phone" name="contactByPhone" type="tel" autocomplete="tel">
         </div>
       </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="contact-3" name="contact" type="radio" value="text" data-aria-controls="conditional-contact-3">
-        <label class="govuk-label govuk-radios__label" for="contact-3">
-          Text message
-        </label>
-      </div>
-      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-3">
-        <div class="govuk-form-group">
-          <label class="govuk-label" for="contact-by-text">
-            Mobile phone number
-          </label>
-          <input class="govuk-input govuk-!-width-one-third" id="contact-by-text" name="contactByText" type="tel" autocomplete="tel">
-        </div>
-      </div>
+     
     </div>
   </fieldset>
-</div>
+
+ 
+
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="partner-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">Is there a partner?</legend>
+  
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="partner" name="partner" type="radio" value="email" data-aria-controls="conditional-partner">
+        <label class="govuk-label govuk-radios__label" for="partner">
+          No
+        </label>
+      </div>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-partner">
+        
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="partner-2" name="partner" type="radio" value="phone" data-aria-controls="conditional-partner-2">
+        <label class="govuk-label govuk-radios__label" for="contact-2">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-partner-2">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="first-name">
+           First name
+          </label>
+          <input class="govuk-input govuk-!-width-one-third" id="first-name" name="name" type="first-name" >
+           <label class="govuk-label" for="first-name">
+           Last name
+          </label>
+          <input class="govuk-input govuk-!-width-one-third" id="first-name" name="name" type="last-name" >
+            <label class="govuk-label" for="first-name">
+           Partner's NINO
+          </label>
+          <input class="govuk-input govuk-!-width-one-third" id="first-name" name="name" type="last-name" >
+        </div>
+      </div>
+     
+    </div>
+  </fieldset>
 
  
  

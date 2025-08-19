@@ -1,0 +1,189 @@
+
+{% extends "layouts/main.html" %}
+ 
+{% block header %}
+{{
+    dwpHeader({
+        serviceName: serviceName,
+        serviceHref: "/",
+        container: true
+    })
+}}
+
+{% endblock %}
+{% block beforeContent %}
+
+
+ {{ govukPhaseBanner({ 
+    tag: { 
+        text: "Alpha" }, 
+        html: 'This is a new service. Help us improve it and <a class="govuk-link" href="#">give your feedback by email</a>.'
+     }) }}  
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third"> 
+
+  <button class="dwp-side-navigation__button" data-module="dwp-side-navigation"
+  data-target="dwp-side-navigation-panel"
+  data-label-hide="Hide navigation"
+  data-label-show="Show navigation"
+  aria-expanded="false">
+  <span class="dwp-side-navigation__section-toggle-focus">
+    <span class="dwp-side-navigation__chevron dwp-side-navigation__chevron--down"></span>
+    <span class="dwp-side-navigation__section-toggle-text">Show navigation</span>
+  </span>
+</button>
+<nav data-module="dwp-side-navigation-panel" class="dwp-side-navigation dwp-side-navigation--mobile" aria-label="Side" role="navigation">
+  <ul class="dwp-side-navigation__list">
+    <li class="dwp-side-navigation__item ">
+      <a id="s-item-1" href="general-details" class="dwp-side-navigation__link" >
+       General details
+      </a>
+    </li>
+    <li class="dwp-side-navigation__item">
+      <a id="s-item-2" href="customer-details" class="dwp-side-navigation__link">
+       Customer details
+      </a>
+    </li>
+    <li class="dwp-side-navigation__item">
+      <a id="s-item-3" href="sample-details" class="dwp-side-navigation__link">
+        Sample details
+      </a>
+    </li>
+    <li class="dwp-side-navigation__item dwp-side-navigation__item--selected" aria-current="true">
+      <a id="s-item-4" href="award-sample-week" class="dwp-side-navigation__link">
+        Award and sample week
+      </a>
+    </li>
+    <li class="dwp-side-navigation__item">
+      <a id="s-item-5" href="sections" class="dwp-side-navigation__link">
+        Sections
+      </a>
+    </li>
+  </ul>
+</nav>
+  </div>
+  <div class="govuk-grid-column-two-thirds"> 
+
+     <form class="form" action="sections" method="post">
+ <span class="govuk-caption-l">ID 1267890</span>
+<h1 class="govuk-heading-l">Award and sample week</h1>
+
+  <div class="govuk-form-group">
+  <label class="govuk-label" for="event-name">
+    <b>Award value</b>
+  </label>
+  <input class="govuk-input" id="event-name" name="eventName" type="text">
+</div>
+ 
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+      <label class="govuk-label" for="event-name"><b>Award change between check start / ends</b></label>
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio" value="england">
+        <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
+          No
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="scotland">
+        <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
+         Yes
+        </label>
+      </div>
+      
+    </div>
+  </fieldset>
+</div>
+
+
+ 
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+    <legend class="govuk-fieldset__legend">
+      <b>Sample week start</b>
+    </legend>  
+    <div class="govuk-date-input" id="passport-issued">
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+            Day
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+            Month
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+            Year
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+        </div>
+      </div>
+    </div>
+  </fieldset>
+</div>   
+
+
+ 
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+    <legend class="govuk-fieldset__legend">
+      <b>Sample week end</b>
+    </legend>  
+    <div class="govuk-date-input" id="passport-issued">
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+            Day
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+            Month
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+            Year
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+        </div>
+      </div>
+    </div>
+  </fieldset>
+</div>   
+
+
+<br clear="all">
+
+
+
+  <button type="submit" class="govuk-button" data-module="govuk-button" >Save and continue</button>
+
+
+  
+    </form>
+  </div> 
+</div> 
+
+{% endblock %}

@@ -1,11 +1,6 @@
 
 {% extends "layouts/main.html" %}
  
-
- 
-
- 
-
 {% block beforeContent %}
 
 
@@ -21,9 +16,8 @@
 {% block content %}
 
 
-
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds"> 
+  <div class="govuk-grid-column-full-width"> 
      <form class="form" action="general-details" method="post">
  <span class="govuk-caption-l">Case 01234567</span>
 <h1 class="govuk-heading-l">Assurance overview</h1>
@@ -38,7 +32,7 @@
      <strong class="govuk-tag govuk-tag--green">New</strong>
     </dd>
     <dd class="govuk-summary-list__actions">
-      <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> name</span></a>
+      
     </dd>
   </div>
   <div class="govuk-summary-list__row">
@@ -49,18 +43,7 @@
       LH XX XX XX D
     </dd>
     <dd class="govuk-summary-list__actions">
-      <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> Due</span></a>
-    </dd>
-  </div>
-  <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key">
-      Due date
-    </dt>
-    <dd class="govuk-summary-list__value">
-       20 November 2024
-    </dd>
-    <dd class="govuk-summary-list__actions">
-      <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> address</span></a>
+     
     </dd>
   </div>
    <div class="govuk-summary-list__row">
@@ -71,20 +54,9 @@
        New claim
     </dd>
     <dd class="govuk-summary-list__actions">
-      <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> address</span></a>
     </dd>
   </div>
-  <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key">
-      Assurance I.D.
-    </dt>
-    <dd class="govuk-summary-list__value">
-      01234567
-    </dd>
-    <dd class="govuk-summary-list__actions">
-      <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> address</span></a>
-    </dd>
-  </div>
+
   <div class="govuk-summary-list__row">
     <dt class="govuk-summary-list__key">
      Assurance period
@@ -93,7 +65,7 @@
        1 June 2025 - 8 June 2025
     </dd>
     <dd class="govuk-summary-list__actions">
-      <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> address</span></a>
+      <a class="govuk-link" href="#">Edit<span class="govuk-visually-hidden"> assurance period</span></a>
     </dd>
   </div>
   <div class="govuk-summary-list__row">
@@ -104,38 +76,31 @@
       11 June 2025 - 18 June 2025
     </dd>
     <dd class="govuk-summary-list__actions">
-      <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> address</span></a>
+       <a class="govuk-link" href="#">Edit<span class="govuk-visually-hidden"> assurance period</span></a>
     </dd>
   </div>
   
   <div class="govuk-summary-list__row">
     <dt class="govuk-summary-list__key">
-      Review period
+      Employee ID
     </dt>
     <dd class="govuk-summary-list__value">
-     12 July 2025 - 19 July 2025
+     1234567890
     </dd>
     <dd class="govuk-summary-list__actions">
-      <ul class="govuk-summary-list__actions-list">
-        <li class="govuk-summary-list__actions-list-item">
-          <a class="govuk-link" href="#">Add<span class="govuk-visually-hidden"> contact details</span></a>
-        </li>
-        <li class="govuk-summary-list__actions-list-item">
-          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> contact details</span></a>
-        </li>
-      </ul>
+    
     </dd>
      
   </div>
  <div class="govuk-summary-list__row">
     <dt class="govuk-summary-list__key">
-      Employee ID
+      Adjudicated date
     </dt>
     <dd class="govuk-summary-list__value">
-      1234579
+      11 June 2025
     </dd>
     <dd class="govuk-summary-list__actions">
-      <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> address</span></a>
+    
     </dd>
   </div>
 </dl>
@@ -174,10 +139,7 @@
       <p class="dwp-timeline__by-line">by John Goldsmith</p>
       <a href="#" class="dwp-timeline__link">View details<span class="govuk-visually-hidden"> of the event on 15 May 2024 at 4:01pm</span></a>
     </li>
- 
-      
- 
-   
+
   </ol>
 </div>  </div>
 </details>

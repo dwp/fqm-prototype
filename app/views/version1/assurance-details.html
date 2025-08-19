@@ -1,0 +1,102 @@
+
+{% extends "layouts/main.html" %}
+ 
+{% block beforeContent %}
+
+
+ {{ govukPhaseBanner({ 
+    tag: { 
+        text: "Alpha" }, 
+        html: 'This is a new service. Help us improve it and <a class="govuk-link" href="#">give your feedback by email</a>.'
+     }) }}  
+
+{% endblock %}
+
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full-width"> 
+     <form class="form" action="general-details" method="post">
+ <span class="govuk-caption-l">Case 01234567</span>
+<h1 class="govuk-heading-l">Assurance overview</h1>
+
+ 
+  <ul class="govuk-task-list">
+  <li class="govuk-task-list__item govuk-task-list__item--with-link">
+    <div class="govuk-task-list__name-and-hint">
+      <a class="govuk-link govuk-task-list__link" href="general-details" aria-describedby="company-details-1-status">
+        General details
+      </a>
+    </div>
+    <div class="govuk-task-list__status" id="company-details-1-status">
+     <strong class="govuk-tag govuk-tag--blue">
+         Incomplete
+      </strong>
+    </div>
+  </li>
+  <li class="govuk-task-list__item govuk-task-list__item--with-link">
+    <div class="govuk-task-list__name-and-hint">
+      <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="company-details-2-status">
+        Customer details
+      </a>
+    </div>
+    <div class="govuk-task-list__status" id="company-details-2-status">
+      <strong class="govuk-tag govuk-tag--blue">
+         Incomplete
+      </strong>
+    </div>
+  </li>
+    <li class="govuk-task-list__item govuk-task-list__item--with-link">
+    <div class="govuk-task-list__name-and-hint">
+      <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="company-details-2-status">
+        Sample details
+      </a>
+    </div>
+    <div class="govuk-task-list__status" id="company-details-2-status">
+      <strong class="govuk-tag govuk-tag--blue">
+        Incomplete
+      </strong>
+    </div>
+  </li>
+  <li class="govuk-task-list__item govuk-task-list__item--with-link">
+    <div class="govuk-task-list__name-and-hint">
+      <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="company-details-4-status">
+        Award and sample week
+      </a>
+    </div>
+    <div class="govuk-task-list__status" id="company-details-4-status">
+      <strong class="govuk-tag govuk-tag--blue">
+        Incomplete
+      </strong>
+    </div>
+  </li>
+  <li class="govuk-task-list__item govuk-task-list__item--with-link">
+    <div class="govuk-task-list__name-and-hint">
+      <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="company-details-5-status">
+        Assurance sections
+      </a>
+    </div>
+    <div class="govuk-task-list__status" id="company-details-5-status">
+      <strong class="govuk-tag govuk-tag--blue">
+        Incomplete
+      </strong>
+    </div>
+  </li>
+</ul>
+   
+<p class="govuk-body">You will not be able to proceed with the assurance until these overview sections are complete</p>
+<div class="govuk-button-group">
+<button type="submit" disabled aria-disabled="true" class="govuk-button" data-module="govuk-button">
+  Disabled button
+</button>
+ 
+</div>
+
+ 
+    </form>
+  </div> 
+</div> 
+
+{% endblock %}
