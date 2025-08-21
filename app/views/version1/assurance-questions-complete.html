@@ -20,13 +20,14 @@
       <a class="govuk-breadcrumbs__link" href="assurance-overview">Overview</a>
     </li>
      <li class="govuk-breadcrumbs__list-item">
-      <a class="govuk-breadcrumbs__link" href="assurance-details-complete">Assurance details</a>
+      <a class="govuk-breadcrumbs__link" href="assurance-details-complete">Details</a>
     </li>
       <li class="govuk-breadcrumbs__list-item">
-      <a class="govuk-breadcrumbs__link" href="assurance-questions">Assurance questions</a>
+      <a class="govuk-breadcrumbs__link" href="assurance-questions">Sections</a>
     </li>
   </ol>
 </nav>
+
 
 {% endblock %}
 
@@ -38,40 +39,158 @@
   <div class="govuk-grid-column-two-thirds"> 
      <form class="form" action="check-summary" method="post">
  <span class="govuk-caption-l">ID 1234567</span>
-<h1 class="govuk-heading-l">Assurance details</h1>
+<h1 class="govuk-heading-l">Assurance sections</h1>
 
- <table class="govuk-table">
-  <caption class="govuk-table__caption govuk-table__caption--m">Month you apply</caption>
-  <thead class="govuk-table__head">
-    <tr class="govuk-table__row">
-      <th scope="col" class="govuk-table__header govuk-!-width-one-half">Date</th>
-      <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Rate for vehicles</th>
-      <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Rate for bicycles</th>
-    </tr>
-  </thead>
-  <tbody class="govuk-table__body">
-    <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header">First 6 weeks</th>
-      <td class="govuk-table__cell">£109.80 per week</td>
-      <td class="govuk-table__cell">£59.10 per week</td>
-    </tr>
-    <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header">Next 33 weeks</th>
-      <td class="govuk-table__cell">£159.80 per week</td>
-      <td class="govuk-table__cell">£89.10 per week</td>
-    </tr>
-    <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header">Total estimated pay</th>
-      <td class="govuk-table__cell">£4,282.20</td>
-      <td class="govuk-table__cell">£2,182.20</td>
-    </tr>
-  </tbody>
-</table> 
+ 
+  <ul class="govuk-task-list">
+  <li class="govuk-task-list__item govuk-task-list__item--with-link">
+    <div class="govuk-task-list__name-and-hint">
+      <a class="govuk-link govuk-task-list__link" href="security-identity" aria-describedby="company-details-1-status">
+        Security and Identity Verification for DWP </a>
+    </div>
+    <div class="govuk-task-list__status" id="company-details-1-status">
+     <strong class="govuk-tag govuk-tag--grey">
+         Completed
+      </strong>
+    </div>
+  </li>
+  <li class="govuk-task-list__item govuk-task-list__item--with-link">
+    <div class="govuk-task-list__name-and-hint">
+       <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="company-details-2-status"> 
+        Personal details </a> 
+      
+    </div>
+    <div class="govuk-task-list__status" id="company-details-2-status">
+      <strong class="govuk-tag govuk-tag--red">
+         2 Errors
+      </strong>
+    </div>
+    
+  </li>
+    <li class="govuk-task-list__item govuk-task-list__item--with-link">
+    <div class="govuk-task-list__name-and-hint">
+      <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="company-details-2-status">
+        Claim date and Eligibility
+      </a>
+    </div>
+    <div class="govuk-task-list__status" id="company-details-2-status">
+      <strong class="govuk-tag govuk-tag--grey">
+         Completed
+      </strong>
+    </div>
+  </li>
+  <li class="govuk-task-list__item govuk-task-list__item--with-link">
+    <div class="govuk-task-list__name-and-hint">
+      <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="company-details-4-status">
+        Contributions Conditions and Tax
+      </a>
+    </div>
+    <div class="govuk-task-list__status" id="company-details-4-status">
+      <strong class="govuk-tag govuk-tag--grey">
+         Completed
+      </strong>
+    </div>
+  </li>
+  <li class="govuk-task-list__item govuk-task-list__item--with-link">
+    <div class="govuk-task-list__name-and-hint">
+      <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="company-details-5-status">
+        Medical details
+      </a>
+    </div>
+    <div class="govuk-task-list__status" id="company-details-5-status">
+     <strong class="govuk-tag govuk-tag--grey">
+         Completed
+      </strong>
+    </div>
+  </li>
+     <li class="govuk-task-list__item govuk-task-list__item--with-link">
+    <div class="govuk-task-list__name-and-hint">
+      <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="company-details-2-status">
+        Special Rules End of Life
+      </a>
+    </div>
+    <div class="govuk-task-list__status" id="company-details-2-status">
+      <strong class="govuk-tag govuk-tag--grey">
+         Completed
+      </strong>
+    </div>
+  </li>
+  <li class="govuk-task-list__item govuk-task-list__item--with-link">
+    <div class="govuk-task-list__name-and-hint">
+      <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="company-details-4-status">Linking</a>
+    </div>
+    <div class="govuk-task-list__status" id="company-details-4-status">
+      <strong class="govuk-tag govuk-tag--grey">
+         Completed
+      </strong>
+    </div>
+  </li>
+  <li class="govuk-task-list__item govuk-task-list__item--with-link">
+    <div class="govuk-task-list__name-and-hint">
+      <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="company-details-5-status">
+       Other Benefits
+      </a>
+    </div>
+    <div class="govuk-task-list__status" id="company-details-5-status">
+     <strong class="govuk-tag govuk-tag--grey">
+         Completed
+      </strong>
+    </div>
+  </li>
+  <li class="govuk-task-list__item govuk-task-list__item--with-link">
+    <div class="govuk-task-list__name-and-hint">
+      <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="company-details-5-status">
+        Premium and extra amounts
+      </a>
+    </div>
+    <div class="govuk-task-list__status" id="company-details-5-status">
+      <strong class="govuk-tag govuk-tag--grey">
+         Completed
+      </strong>
+    </div>
+  </li>
+  <li class="govuk-task-list__item govuk-task-list__item--with-link">
+    <div class="govuk-task-list__name-and-hint">
+      <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="company-details-5-status">
+       Employment/self employment and earnings
+      </a>
+    </div>
+    <div class="govuk-task-list__status" id="company-details-5-status">
+      <strong class="govuk-tag govuk-tag--grey">
+         Completed
+      </strong>
+    </div>
+  </li>
+    <li class="govuk-task-list__item govuk-task-list__item--with-link">
+    <div class="govuk-task-list__name-and-hint">
+      <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="company-details-5-status">
+        Non state pension
+      </a>
+    </div>
+    <div class="govuk-task-list__status" id="company-details-5-status">
+      <strong class="govuk-tag govuk-tag--grey">
+         Completed
+      </strong>
+    </div>
+  </li>
+  <li class="govuk-task-list__item govuk-task-list__item--with-link">
+    <div class="govuk-task-list__name-and-hint">
+      <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="company-details-5-status">
+       Housing
+      </a>
+    </div>
+    <div class="govuk-task-list__status" id="company-details-5-status">
+     <strong class="govuk-tag govuk-tag--grey">
+         Completed
+      </strong>
+    </div>
+  </li>
+</ul>
 
-<p class="govuk-body"> </p>
+ 
 <div class="govuk-button-group">
 <button type="submit"  class="govuk-button" data-module="govuk-button">
- Save and continue
+  Continue to check summary
 </button>
  
 </div>

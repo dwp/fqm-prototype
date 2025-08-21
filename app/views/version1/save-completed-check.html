@@ -1,0 +1,137 @@
+
+{% extends "layouts/main.html" %}
+ 
+{% block beforeContent %}
+
+
+ {{ govukPhaseBanner({ 
+    tag: { 
+        text: "Alpha" }, 
+        html: 'This is a new service. Help us improve it and <a class="govuk-link" href="#">give your feedback by email</a>.'
+     }) }}  
+
+<nav class="govuk-breadcrumbs" aria-label="Breadcrumb">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="select-assurance">My assurances</a>
+    </li>
+   
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="assurance-overview">Overview</a>
+    </li>
+     <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="assurance-details-complete">Assurance details</a>
+    </li>
+      <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="assurance-questions">Assurance sections</a>
+    </li>
+     <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="assurance-questions">Check summary</a>
+    </li>
+     <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="assurance-questions">Save completed check</a>
+    </li>
+  </ol>
+</nav>
+
+{% endblock %}
+
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full"> 
+     <form class="form" action="general-details" method="post">
+ <span class="govuk-caption-l">ID 1234567</span>
+<h1 class="govuk-heading-l">Check summary</h1>
+
+  <table class="govuk-table">
+ 
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Errors</th>
+      <th scope="col" class="govuk-table__header">Total</th>
+      <th scope="col" class="govuk-table__header">Amount (Including deemed)</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Process errors</th>
+      <td class="govuk-table__cell"> <input class="govuk-input govuk-input--width-2" id="width-2" name="width2" type="text" value="4">
+      <td class="govuk-table__cell"></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Overpayment errors</th>
+      <td class="govuk-table__cell"><input class="govuk-input govuk-input--width-2" id="width-2" name="width2" type="text" value="3"></td>
+       <td class="govuk-table__cell"><input class="govuk-input govuk-input--width-5" id="width-5" name="width5" type="text" value="£0.00"> </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Underpayment errors</th>
+      <td class="govuk-table__cell"><input class="govuk-input govuk-input--width-2" id="width-2" name="width2" type="text" value="0"></td>
+      <td class="govuk-table__cell"><input class="govuk-input govuk-input--width-5" id="width-5" name="width5" type="text" value="£0.00"> </td>
+    </tr>
+        <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Potential errors</th>
+      <td class="govuk-table__cell"><input class="govuk-input govuk-input--width-2" id="width-2" name="width2" type="text" value="3"></td>
+      <td class="govuk-table__cell"> </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Errors disputed</th>
+      <td class="govuk-table__cell"><input class="govuk-input govuk-input--width-2" id="width-2" name="width2" type="text" value="0"></td>
+      <td class="govuk-table__cell"> </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Business event outcome</th>
+      <td class="govuk-table__cell">DWP Detriment</td>
+      <td class="govuk-table__cell"></td>
+    </tr>
+        <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Errors disputed</th>
+      <td class="govuk-table__cell">Potential errors</td>
+      <td class="govuk-table__cell"> </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Curent award</th>
+      <td class="govuk-table__cell"><input class="govuk-input govuk-input--width-5" id="width-5" name="width5" type="text" value="£11.31"> </td>
+      <td class="govuk-table__cell"> </td>
+    </tr>
+     <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Award due</th>
+      <td class="govuk-table__cell"><input class="govuk-input govuk-input--width-5" id="width-5" name="width5" type="text" value="£0.00"> </td>
+      <td class="govuk-table__cell"> </td>
+    </tr>
+    
+  </tbody>
+</table>
+
+  <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+        <label class="govuk-label govuk-checkboxes__label" for="waste">
+          Debt action required on check
+        </label>
+      </div>
+<p><br></p>
+<div class="govuk-form-group">
+  <h1 class="govuk-label-wrapper">
+    <label class="govuk-label govuk-label--s" for="more-detail">
+      Checker comments and notes
+    </label>
+  </h1>
+
+  <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5" aria-describedby="more-detail-hint"></textarea>
+</div>
+
+<div class="govuk-button-group">
+<button type="submit"  class="govuk-button" data-module="govuk-button">
+  Save and continue
+</button>
+ 
+</div>
+
+ 
+    </form>
+  </div> 
+</div> 
+
+{% endblock %}

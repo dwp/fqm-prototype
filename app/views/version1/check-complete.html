@@ -1,0 +1,45 @@
+
+{% extends "layouts/main.html" %}
+
+ 
+{% block beforeContent %}
+
+
+ {{ govukPhaseBanner({ 
+    tag: { 
+        text: "Alpha" }, 
+        html: 'This is a new service. Help us improve it and <a class="govuk-link" href="#">give your feedback by email</a>.'
+     }) }} 
+   
+
+{% endblock %}
+
+{% block content %}
+
+
+
+<div class="govuk-grid-row">
+   <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-panel govuk-panel--confirmation">
+          <h1 class="govuk-panel__title">
+            Check complete
+          </h1>
+          <div class="govuk-panel__body">
+            Case ID<br><strong>1234567890</strong>
+          </div>
+        </div>
+  
+        <h2 class="govuk-heading-m">What happens next</h2>
+        <p class="govuk-body">
+         This case has been submitted. You can pick another case from my assurances.
+        </p>
+         
+        <p class="govuk-body">
+          <a href="select-assurance" class="govuk-link">Return to my assurances</a>  
+        </p>
+      </div>
+    
+  </div> 
+</div> 
+
+{% endblock %}

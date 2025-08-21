@@ -130,7 +130,7 @@
 
     
 
-     <form class="form" action="#" method="post">
+     <form class="form" action="assurance-questions-complete" method="post">
  <span class="govuk-caption-l">ID 1234567</span>
 <h1 class="govuk-heading-l"> Security and Identity Verification for DWP </h1>
 
@@ -165,23 +165,23 @@
         </label>
       </div>
      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
+        <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" checked data-aria-controls="conditional-contact">
         <label class="govuk-label govuk-radios__label" for="contact">
-          No (record error)
+          No - <strong class="govuk-tag govuk-tag--red">
+          1 error recorded
+        </strong>
         </label>
       </div>
       <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
         <div class="govuk-form-group">        
-             <a href="record-error">Record the error (opens in a new tab)</a>
+             <a href="#">View the error (opens in a new tab)</a>
         </div>
       </div>
     </div>
   </fieldset>
 </div>
 
- 
-      
-
+  
  
  
 <div class="govuk-button-group">
