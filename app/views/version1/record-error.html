@@ -69,37 +69,37 @@
   </h2>
   <ul class="govuk-tabs__list">
     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-      <a class="govuk-tabs__tab" href="#past-day">
+      <a class="govuk-tabs__tab" href="#contributors">
        Contributors
       </a>
     </li>
     <li class="govuk-tabs__list-item">
-      <a class="govuk-tabs__tab" href="#past-week">
+      <a class="govuk-tabs__tab" href="#reason">
         Reason
       </a>
     </li>
     <li class="govuk-tabs__list-item">
-      <a class="govuk-tabs__tab" href="#past-month">
+      <a class="govuk-tabs__tab" href="#overpayment">
         Overpayment
       </a>
     </li>
     <li class="govuk-tabs__list-item">
-      <a class="govuk-tabs__tab" href="#past-year">
+      <a class="govuk-tabs__tab" href="#potential">
         Potential
       </a>
     </li>
      <li class="govuk-tabs__list-item">
-      <a class="govuk-tabs__tab" href="#past-month">
+      <a class="govuk-tabs__tab" href="#more-info">
         More info
       </a>
     </li>
     <li class="govuk-tabs__list-item">
-      <a class="govuk-tabs__tab" href="#past-year">
+      <a class="govuk-tabs__tab" href="#links">
         Links
       </a>
     </li>
   </ul>
-  <div class="govuk-tabs__panel" id="past-day">
+  <div class="govuk-tabs__panel" id="contributors">
      <h2 class="govuk-heading-l">Contributors</h2>
     <table class="govuk-table">
       <tbody class="govuk-table__body">
@@ -182,7 +182,7 @@
       </tbody>
     </table>
   </div>
-  <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-week">
+  <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="reason">
     <h2 class="govuk-heading-l">Reason</h2>
     <table class="govuk-table">
        
@@ -202,7 +202,7 @@
             <div class="govuk-checkboxes__item">
         <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
         <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
-          1793 Identity not established or incorrect
+         1794 Identity verified incorrectly
         </label>
       </div> 
           </td>
@@ -212,7 +212,28 @@
             <div class="govuk-checkboxes__item">
         <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
         <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
-          1793 Identity not established or incorrect
+          1795 Fraud check missed or incorrect
+        </label>
+      </div> 
+          </td>
+        </tr>
+        
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+        <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+        1796 Unable to view document
+        </label>
+      </div> 
+          </td>
+        </tr>  
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+        <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+         1797 Alternative methods of verification not used or incorrect
         </label>
       </div> 
           </td>
@@ -220,63 +241,151 @@
       </tbody>
     </table>
   </div>
-  <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-month">
+  <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="overpayment">
     <h2 class="govuk-heading-l">Overpayment</h2>
-    <table class="govuk-table">
-      <thead class="govuk-table__head">
+       <table class="govuk-table">
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Inside sample
+ </th>
+      <td class="govuk-table__cell"> 
+        <input class="govuk-input govuk-input--width-20" id="width-20" name="width20" type="text" value=" ">
+           </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Changed MVE</th>
+      <td class="govuk-table__cell"><input class="govuk-input govuk-input--width-20" id="width-20" name="width20" type="text" value=" "></td>
+      </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Weekly error amount</th>
+       <td class="govuk-table__cell"><input class="govuk-input govuk-input--width-20" id="width-20" name="width20" type="text" value=" "></td>
+    </tr>
         <tr class="govuk-table__row">
-          <th scope="col" class="govuk-table__header">Reason</th>
-          <th scope="col" class="govuk-table__header">Overpayment</th>
-          <th scope="col" class="govuk-table__header">Potential</th>
-          <th scope="col" class="govuk-table__header">More info</th>
-          <th scope="col" class="govuk-table__header">Links</th>
-        </tr>
-      </thead>
-      <tbody class="govuk-table__body">
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell">David Francis</td>
-          <td class="govuk-table__cell">98</td>
-          <td class="govuk-table__cell">95</td>
-        </tr>
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell">Paul Farmer</td>
-          <td class="govuk-table__cell">122</td>
-          <td class="govuk-table__cell">131</td>
-        </tr>
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell">Rita Patel</td>
-          <td class="govuk-table__cell">126</td>
-          <td class="govuk-table__cell">142</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-year">
-    <h2 class="govuk-heading-l">Potential</h2>
-    <table class="govuk-table">
+      <th scope="row" class="govuk-table__header">Total error amount</th>
+       <td class="govuk-table__cell"><input class="govuk-input govuk-input--width-20" id="width-20" name="width20" type="text" value=" "></td>
+    </tr>
+     <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">MVE Categorisation</th>
+       <td class="govuk-table__cell"> <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changedName" name="changedName" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="changedName">
+          Monetary
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changedName-2" name="changedName" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="changedName-2">
+          Entitlement
+        </label>
+      </div>
+    </div></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Overpayment start date</th>
+       <td class="govuk-table__cell">  <div class="govuk-date-input" id="passport-issued">
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+            Day
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+            Month
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+            Year
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+        </div>
+      </div>
       
-      <tbody class="govuk-table__body">
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell">David Francis</td>
-          <td class="govuk-table__cell">1380</td>
-          <td class="govuk-table__cell">1472</td>
+       </td>
+    </tr> 
+     <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Overpayment end date</th>
+       <td class="govuk-table__cell">  <div class="govuk-date-input" id="passport-issued">
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+            Day
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+            Month
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+            Year
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+        </div>
+      </div>
+      
+       </td>
+    </tr> 
+  </tbody>
+</table>
+  </div>
+  <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="potential">
+    <h2 class="govuk-heading-l">Potential</h2>
+     <p class="govuk-body">Dummy data here</p> 
+  </div>
+    <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="more-info">
+    <h2 class="govuk-heading-l">More Info</h2>
+       <div class="govuk-form-group">
+  <label class="govuk-label" for="more-detail">
+    Additional information for feedback template
+  </label>
+  <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5"></textarea>
+</div>
+ </div>
+    <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="links">
+    <h2 class="govuk-heading-l">Links</h2>
+    
+    <table class="govuk-table">
+        <tr>
+          <td class="govuk-table__cell">Link 1</td>
+          <td><input class="govuk-input govuk-input--width-20" id="width-10" name="width10" type="text"></td>
         </tr>
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell">Paul Farmer</td>
-          <td class="govuk-table__cell">1129</td>
-          <td class="govuk-table__cell">1083</td>
+         <tr>
+          <td class="govuk-table__cell">Link 2</td>
+          <td><input class="govuk-input govuk-input--width-20" id="width-10" name="width10" type="text"></td>
         </tr>
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell">Rita Patel</td>
-          <td class="govuk-table__cell">1539</td>
-          <td class="govuk-table__cell">1265</td>
+        <tr>
+          <td class="govuk-table__cell">Link 3</td>
+          <td><input class="govuk-input govuk-input--width-20" id="width-10" name="width10" type="text"></td>
         </tr>
-      </tbody>
+        <tr>
+          <td class="govuk-table__cell">Link 4</td>
+          <td><input class="govuk-input govuk-input--width-20" id="width-10" name="width10" type="text"></td>
+        </tr>
+        <tr>
+          <td class="govuk-table__cell">Link 5</td>
+          <td><input class="govuk-input govuk-input--width-20" id="width-10" name="width10" type="text"></td>
+        </tr>
     </table>
   </div>
 </div>
 
-  <div class="govuk-checkboxes__item">
+
+      <div class="govuk-checkboxes__item">
         <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
         <label class="govuk-label govuk-checkboxes__label" for="waste">
           Corrective action complete
